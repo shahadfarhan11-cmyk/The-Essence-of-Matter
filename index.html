@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مختبر الكيمياء التفاعلي</title>
+    <meta
+      name="description"
+      content="موقع تعليمي تفاعلي يضم موسوعة العناصر الكيميائية، مختبر اندماج، ألبوم المركبات، تحديات وأوسمة."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">S</div>
+        <div>
+          <p class="brand-kicker">مختبر</p>
+          <h1>الكيمياء التفاعلي</h1>
+        </div>
+      </div>
+
+      <nav class="topnav" aria-label="التنقل الرئيسي">
+        <a href="#elements">العناصر</a>
+        <a href="#lab">المختبر</a>
+        <a href="#album">ألبوم المركبات</a>
+        <a href="#quiz">تحدي المعرفة</a>
+      </nav>
+
+      <button id="resetProgress" class="ghost-btn" type="button">إعادة التقدم</button>
+    </header>
+
+    <main>
+      <section class="hero panel">
+        <div class="hero-copy">
+          <span class="badge-pill">رحلة استكشاف علمية</span>
+          <h2>اكتشفي العالم الكيميائي من حولك</h2>
+          <p>
+            انطلقت باكتشاف العناصر في الطبيعة، ثم التقيت بالمختبر لتفهم كيف تتحد
+            الذرات وتتشكل الروابط وتنتج مركبات جديدة، وكل ذلك بطريقة آمنة وجذابة
+            ومناسبة للمتعلمين من جميع الأعمار.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#elements">ابدئي الاستكشاف</a>
+            <a class="secondary-btn" href="#lab">جربي المختبر</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="molecule-stage">
+            <div class="molecule molecule-a">
+              <span>H</span>
+              <span>O</span>
+              <span>H</span>
+            </div>
+            <div class="molecule molecule-b">
+              <span>Na</span>
+              <span>Cl</span>
+            </div>
+            <div class="molecule molecule-c">
+              <span>CO₂</span>
+            </div>
+          </div>
+          <div class="float-badges">
+            <span>H₂O</span>
+            <span>CO₂</span>
+            <span>NaCl</span>
+          </div>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <strong id="metricElements">118</strong>
+            <span>عنصر في الجدول الدوري</span>
+          </div>
+          <div class="metric-card">
+            <strong id="metricPoints">0</strong>
+            <span>نقاط اكتشاف</span>
+          </div>
+          <div class="metric-card">
+            <strong id="metricBadges">0</strong>
+            <span>أوسمة مكتسبة</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="elements" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-label">موسوعة العناصر</p>
+            <h3>الكيمياء في حياتنا</h3>
+          </div>
+          <div class="search-wrap">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="ابحثي عن عنصر أو رمز..."
+              aria-label="ابحث عن عنصر"
+            />
+          </div>
+        </div>
+
+        <div id="categoryFilters" class="category-filters" aria-label="تصفية العناصر"></div>
+
+        <div class="content-grid">
+          <div id="elementGrid" class="element-grid" aria-live="polite"></div>
+
+          <aside id="elementDetails" class="element-details" aria-live="polite">
+            <div class="placeholder-detail">
+              <h4>اختر عنصراً لعرض معلوماته</h4>
+              <p>استكشف العناصر، ثم اقرأ أين توجد في الطبيعة وكيف تؤثر في حياتنا اليومية.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="lab" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-label">مختبر الاندماج</p>
+            <h3>دمجي بين عنصرين، وارئي التفاعل</h3>
+          </div>
+        </div>
+
+        <div class="lab-layout">
+          <div class="lab-controls">
+            <label>
+              العنصر الأول
+              <select id="elementA"></select>
+            </label>
+
+            <label>
+              العنصر الثاني
+              <select id="elementB"></select>
+            </label>
+
+            <button id="combineBtn" class="primary-btn" type="button">عرض المركب</button>
+
+            <div class="reaction-bank-wrap">
+              <div class="bank-head">
+                <span>تفاعلات مختارة</span>
+                <small>ابدئي بسرعة</small>
+              </div>
+              <div id="reactionBank" class="reaction-bank" aria-live="polite"></div>
+            </div>
+          </div>
+
+          <div id="labResult" class="lab-result" aria-live="polite">
+            <div class="result-placeholder">
+              <h4>أختر مزيجاً كي ترى المبنى الجزيئي الناتج</h4>
+              <p>مثل: الهيدروجين + الأكسجين = الماء، أو الصوديوم + الكلور = ملح الطعام.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="album" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-label">ألبوم المركبات</p>
+            <h3>اكتشافاتي الكيميائية</h3>
+          </div>
+        </div>
+
+        <div id="compoundAlbum" class="compound-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="quiz" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-label">تحدي المعرفة</p>
+            <h3>اختبر معلوماتك</h3>
+          </div>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-topbar">
+            <span id="quizCounter">السؤال 1 من 3</span>
+            <span id="quizScoreView">النقاط: 0</span>
+          </div>
+
+          <h4 id="quizQuestion">...</h4>
+          <div id="quizOptions" class="quiz-options"></div>
+        </div>
+      </section>
+
+      <section id="badges" class="panel">
+        <div class="section-head">
+          <div>
+            <p class="section-label">الأوسمة</p>
+            <h3>سجل الإنجازات</h3>
+          </div>
+        </div>
+
+        <div id="badgeList" class="badge-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>مختبر الكيمياء التفاعلي • تصميم تعليمي تفاعلي آمن ومبني محلياً في المتصفح</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
