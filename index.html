@@ -1,211 +1,186 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>مختبر الكيمياء التفاعلي</title>
-    <meta
-      name="description"
-      content="موقع تعليمي تفاعلي يضم موسوعة العناصر الكيميائية، مختبر اندماج، ألبوم المركبات، تحديات وأوسمة."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="brand-wrap">
-        <div class="brand-mark">S</div>
-        <div>
-          <p class="brand-kicker">مختبر</p>
-          <h1>الكيمياء التفاعلي</h1>
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مختبر شغف التفاعلي: جوهر المادة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      <nav class="topnav" aria-label="التنقل الرئيسي">
-        <a href="#elements">العناصر</a>
-        <a href="#lab">المختبر</a>
-        <a href="#album">ألبوم المركبات</a>
-        <a href="#quiz">تحدي المعرفة</a>
-      </nav>
-
-      <button id="resetProgress" class="ghost-btn" type="button">إعادة التقدم</button>
+    <header>
+        <div class="project-title">🧪 مختبر شغف: جوهر المادة</div>
+        <div class="author-meta">إعداد الطالبة: <span>رند فرحان العنزي</span> | إشراف المعلمة: <span>منيرة الرويلي</span></div>
     </header>
 
-    <main>
-      <section class="hero panel">
-        <div class="hero-copy">
-          <span class="badge-pill">رحلة استكشاف علمية</span>
-          <h2>اكتشفي العالم الكيميائي من حولك</h2>
-          <p>
-            انطلقت باكتشاف العناصر في الطبيعة، ثم التقيت بالمختبر لتفهم كيف تتحد
-            الذرات وتتشكل الروابط وتنتج مركبات جديدة، وكل ذلك بطريقة آمنة وجذابة
-            ومناسبة للمتعلمين من جميع الأعمار.
-          </p>
-          <div class="hero-actions">
-            <a class="primary-btn" href="#elements">ابدئي الاستكشاف</a>
-            <a class="secondary-btn" href="#lab">جربي المختبر</a>
-          </div>
-        </div>
+    <div class="slides-container">
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="molecule-stage">
-            <div class="molecule molecule-a">
-              <span>H</span>
-              <span>O</span>
-              <span>H</span>
+        <!-- الشريحة 1: المقدمة -->
+        <div class="slide active">
+            <div class="slide-header">
+                <h2>نحن العناصر... لغة الكون والمادة</h2>
+                <span class="slide-badge">الموسوعة الحية</span>
             </div>
-            <div class="molecule molecule-b">
-              <span>Na</span>
-              <span>Cl</span>
+            <p>أنا الكيمياء.. لستُ مجرد رموز جافة في الكتب، بل أنا نبض الطبيعة وأسرار المادة المنظومة بحكمة في الكون!</p>
+            <div class="elements-grid">
+                <div class="element-card gold-card">
+                    <div class="card-top">
+                        <span class="element-symbol">Au</span>
+                        <span class="element-atomic">العدد الذري: 79</span>
+                    </div>
+                    <div class="element-name">الذهب (Gold)</div>
+                    <div class="element-detail">
+                        • الحالة: صلب نقي رمزه الكيميائي خامل.<br>
+                        • أين تجده: في عروق الصخور النارية والحلي.<br>
+                        • ميزة: موصل فائق للكهرباء لا يصدأ.
+                    </div>
+                </div>
+                <div class="element-card calcium-card">
+                    <div class="card-top">
+                        <span class="element-symbol">Ca</span>
+                        <span class="element-atomic">العدد الذري: 20</span>
+                    </div>
+                    <div class="element-name">الكالسيوم (Calcium)</div>
+                    <div class="element-detail">
+                        • الحالة: فلز قروي أبيض فضي.<br>
+                        • أين تجده: بالحليب، العظام، وجبال الرخام.<br>
+                        • ميزة: يمنح القوة البنائية للهياكل الحية.
+                    </div>
+                </div>
             </div>
-            <div class="molecule molecule-c">
-              <span>CO₂</span>
+        </div>
+
+        <!-- الشريحة 2: موسوعة العناصر المكتملة -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>موسوعة العناصر والتواجد في الطبيعة</h2>
+                <span class="slide-badge">البصمة البيئية</span>
             </div>
-          </div>
-          <div class="float-badges">
-            <span>H₂O</span>
-            <span>CO₂</span>
-            <span>NaCl</span>
-          </div>
-        </div>
-
-        <div class="hero-metrics">
-          <div class="metric-card">
-            <strong id="metricElements">118</strong>
-            <span>عنصر في الجدول الدوري</span>
-          </div>
-          <div class="metric-card">
-            <strong id="metricPoints">0</strong>
-            <span>نقاط اكتشاف</span>
-          </div>
-          <div class="metric-card">
-            <strong id="metricBadges">0</strong>
-            <span>أوسمة مكتسبة</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="elements" class="panel">
-        <div class="section-head">
-          <div>
-            <p class="section-label">موسوعة العناصر</p>
-            <h3>الكيمياء في حياتنا</h3>
-          </div>
-          <div class="search-wrap">
-            <input
-              id="searchInput"
-              type="search"
-              placeholder="ابحثي عن عنصر أو رمز..."
-              aria-label="ابحث عن عنصر"
-            />
-          </div>
-        </div>
-
-        <div id="categoryFilters" class="category-filters" aria-label="تصفية العناصر"></div>
-
-        <div class="content-grid">
-          <div id="elementGrid" class="element-grid" aria-live="polite"></div>
-
-          <aside id="elementDetails" class="element-details" aria-live="polite">
-            <div class="placeholder-detail">
-              <h4>اختر عنصراً لعرض معلوماته</h4>
-              <p>استكشف العناصر، ثم اقرأ أين توجد في الطبيعة وكيف تؤثر في حياتنا اليومية.</p>
+            <p>انظري كيف تتوزع عناصرنا وتصنيفاتها بخصائصها الحقيقية في كل نواحي بيئتنا:</p>
+            <div class="elements-grid">
+                <div class="element-card silicon-card">
+                    <div class="card-top">
+                        <span class="element-symbol">Si</span>
+                        <span class="element-atomic">العدد الذري: 14</span>
+                    </div>
+                    <div class="element-name">السيليكون (Silicon)</div>
+                    <div class="element-detail">
+                        • أين تجده: رمل الشواطئ والشرائح الذكية.<br>
+                        • ميزة: عصب ثورة الإلكترونيات والتقنية.
+                    </div>
+                </div>
+                <div class="element-card chlorine-card">
+                    <div class="card-top">
+                        <span class="element-symbol">Cl</span>
+                        <span class="element-atomic">العدد الذري: 17</span>
+                    </div>
+                    <div class="element-name">الكلور (Chlorine)</div>
+                    <div class="element-detail">
+                        • أين تجده: مياه المحيطات والمركبات المطهرة.<br>
+                        • ميزة: مطهر قوي يسهم في تكوين الملح.
+                    </div>
+                </div>
+                <div class="element-card sodium-card">
+                    <div class="card-top">
+                        <span class="element-symbol">Na</span>
+                        <span class="element-atomic">العدد الذري: 11</span>
+                    </div>
+                    <div class="element-name">الصوديوم (Sodium)</div>
+                    <div class="element-detail">
+                        • أين تجده: المركبات الملحية والسوائل التناضحية.<br>
+                        • ميزة: شديد التفاعل يمنح التوازن السائلي.
+                    </div>
+                </div>
+                <div class="element-card hydrogen-card">
+                    <div class="card-top">
+                        <span class="element-symbol">Fe</span>
+                        <span class="element-atomic">العدد الذري: 26</span>
+                    </div>
+                    <div class="element-name">الحديد (Iron)</div>
+                    <div class="element-detail">
+                        • أين تجده: نوات الأرض، المباني، وهيموجلوبين الدم.<br>
+                        • ميزة: أساس الصلابة البنائية ونقل الأكسجين.
+                    </div>
+                </div>
             </div>
-          </aside>
-        </div>
-      </section>
-
-      <section id="lab" class="panel">
-        <div class="section-head">
-          <div>
-            <p class="section-label">مختبر الاندماج</p>
-            <h3>دمجي بين عنصرين، وارئي التفاعل</h3>
-          </div>
         </div>
 
-        <div class="lab-layout">
-          <div class="lab-controls">
-            <label>
-              العنصر الأول
-              <select id="elementA"></select>
-            </label>
-
-            <label>
-              العنصر الثاني
-              <select id="elementB"></select>
-            </label>
-
-            <button id="combineBtn" class="primary-btn" type="button">عرض المركب</button>
-
-            <div class="reaction-bank-wrap">
-              <div class="bank-head">
-                <span>تفاعلات مختارة</span>
-                <small>ابدئي بسرعة</small>
-              </div>
-              <div id="reactionBank" class="reaction-bank" aria-live="polite"></div>
+        <!-- الشريحة 3: التفاعلات الكيميائية الكاملة -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>مختبر التفاعلات والروابط الجزيئية</h2>
+                <span class="slide-badge">محرك الاندماج</span>
             </div>
-          </div>
-
-          <div id="labResult" class="lab-result" aria-live="polite">
-            <div class="result-placeholder">
-              <h4>أختر مزيجاً كي ترى المبنى الجزيئي الناتج</h4>
-              <p>مثل: الهيدروجين + الأكسجين = الماء، أو الصوديوم + الكلور = ملح الطعام.</p>
+            <p>اختر تفاعلاً كيميائياً لشرح كيف تتبادل الذرات إلكتروناتها وتبني الروابط:</p>
+            
+            <div class="reaction-selector">
+                <button class="rxn-btn active" data-rxn="water">ماء (H₂O)</button>
+                <button class="rxn-btn" data-rxn="co2">ثاني أكسيد الكربون (CO₂)</button>
+                <button class="rxn-btn" data-rxn="salt">ملح الطعام (NaCl)</button>
+                <button class="rxn-btn" data-rxn="rust">صدأ الحديد (Fe₂O₃)</button>
+                <button class="rxn-btn" data-rxn="volcano">البركان المطبخي (الخل والبيكربونات)</button>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="album" class="panel">
-        <div class="section-head">
-          <div>
-            <p class="section-label">ألبوم المركبات</p>
-            <h3>اكتشافاتي الكيميائية</h3>
-          </div>
+            <div id="reactionDisplay" class="reaction-display-box">
+                <!-- يتم التحديث ديناميكياً عبر JavaScript -->
+            </div>
         </div>
 
-        <div id="compoundAlbum" class="compound-grid" aria-live="polite"></div>
-      </section>
-
-      <section id="quiz" class="panel">
-        <div class="section-head">
-          <div>
-            <p class="section-label">تحدي المعرفة</p>
-            <h3>اختبر معلوماتك</h3>
-          </div>
+        <!-- الشريحة 4: ألبوم المركبات والأوسمة -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>ألبوم المركبات (Compound Codex) وسجل الأوسمة</h2>
+                <span class="slide-badge">نظام الإنجاز</span>
+            </div>
+            <p>كل تجربة اندماج ناجحة تُحفظ كبطاقة اكتشاف في ألبومكِ الخاص مع وسام تفوق:</p>
+            <div class="elements-grid">
+                <div class="element-card gold-card">
+                    <div class="card-top">
+                        <span class="element-symbol">🏆</span>
+                        <span class="bond-tag">وسام مكتشفة الطبيعة</span>
+                    </div>
+                    <div class="element-name">خبير استكشاف العناصر</div>
+                    <div class="element-detail">
+                        يُكتسب عند معرفة مصادر العناصر بالبيئة وتتبع خصائصها الذرية والفيزيائية.
+                    </div>
+                </div>
+                <div class="element-card chlorine-card">
+                    <div class="card-top">
+                        <span class="element-symbol">🧬</span>
+                        <span class="bond-tag">وسام هندسة الجزيئات</span>
+                    </div>
+                    <div class="element-name">مهندسة الروابط الكيميائية</div>
+                    <div class="element-detail">
+                        يُمنح عند دمج العناصر في المختبر الافتراضي واستكشاف تركيبة الروابط الناتجة.
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="quiz-card">
-          <div class="quiz-topbar">
-            <span id="quizCounter">السؤال 1 من 3</span>
-            <span id="quizScoreView">النقاط: 0</span>
-          </div>
-
-          <h4 id="quizQuestion">...</h4>
-          <div id="quizOptions" class="quiz-options"></div>
-        </div>
-      </section>
-
-      <section id="badges" class="panel">
-        <div class="section-head">
-          <div>
-            <p class="section-label">الأوسمة</p>
-            <h3>سجل الإنجازات</h3>
-          </div>
+        <!-- الشريحة 5: الخاتمة -->
+        <div class="slide" style="text-align: center;">
+            <div class="slide-header">
+                <h2>الكيمياء تنبض بالشغف والجمال معكِ</h2>
+                <span class="slide-badge">الخاتمة</span>
+            </div>
+            <p style="font-size: 1.1rem; margin: 10px 0;">رحلتنا في علم المادة مستمرة.. ومختبر شغف يفتح أبواب الاكتشاف لتلهمي العقول وتصنعي الفرق!</p>
+            <div style="background: var(--primary-light); padding: 12px; border-radius: 12px; margin-top: 10px;">
+                <p style="font-size: 1.25rem; color: var(--primary); font-weight: 900;">صُنع بشغف لإبهار العقول وتسهيل العلوم!</p>
+                <p style="color: var(--text-muted); margin-top: 4px; font-size: 0.9rem;">إعداد الطالبة: <strong>رند فرحان العنزي</strong> | إشراف المعلمة: <strong>منيرة الرويلي</strong></p>
+            </div>
         </div>
 
-        <div id="badgeList" class="badge-grid"></div>
-      </section>
-    </main>
+    </div>
 
-    <footer class="site-footer">
-      <p>مختبر الكيمياء التفاعلي • تصميم تعليمي تفاعلي آمن ومبني محلياً في المتصفح</p>
+    <footer>
+        <div class="controls">
+            <button id="prevBtn">❮ السابق</button>
+            <button id="nextBtn">التالي ❯</button>
+        </div>
+        <div class="slide-counters" id="slideCounters">الشريحة 1 من 5</div>
     </footer>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
