@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7c3aed">
+  <meta name="description" content="مختبر شغف: اكتشف العناصر، جرّب التفاعلات الافتراضية، واختبر معرفتك بالكيمياء.">
+  <title>مختبر شغف | الكيمياء تبدأ بالفضول</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚗️</text></svg>">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="مختبر شغف - الرئيسية">
+        <span class="brand-mark">⚗</span>
+        <span><strong>مختبر شغف</strong><small>الكيمياء تبدأ بالفضول</small></span>
+      </a>
+      <p class="nav-caption">مساحة التعلّم</p>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <button class="nav-link active" data-view="home"><span class="nav-icon">⌂</span>الرئيسية</button>
+        <button class="nav-link" data-view="elements"><span class="nav-icon">◈</span>موسوعة العناصر</button>
+        <button class="nav-link" data-view="lab"><span class="nav-icon">⚗</span>المختبر الافتراضي</button>
+        <button class="nav-link" data-view="quiz"><span class="nav-icon">✳</span>تحدّي المعرفة</button>
+        <button class="nav-link" data-view="journal"><span class="nav-icon">▤</span>سجل الاكتشافات</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="side-card">
+          <span class="side-orbit">✦</span>
+          <p>كل اكتشاف صغير<br>يقود إلى فكرة كبيرة.</p>
+          <span class="side-note">واصل الاستكشاف!</span>
+        </div>
+        <div class="profile-row">
+        <div class="avatar">ش</div>
+        <div><strong>زائرة المختبر</strong><small>متعلّمة مستقلة</small></div>
+          <span class="online-dot"></span>
+        </div>
+        <p class="privacy-note">✦ تقدّمك محفوظ على هذا الجهاز</p>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">☰</button>
+        <div class="breadcrumb"><span>مساحة التعلّم</span><b>/</b><strong id="pageTitle">الرئيسية</strong></div>
+        <div class="top-actions">
+          <div class="streak-pill"><span>✦</span><span id="headerXp">0</span><small>نقطة شغف</small></div>
+          <button class="help-button" id="aboutButton" aria-label="عن المختبر">؟</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="view active" id="view-home" aria-labelledby="welcomeTitle">
+          <div class="welcome-line"><span class="eyebrow"><i></i> مساحة آمنة للتجربة والاكتشاف</span><span class="today-label" id="todayLabel"></span></div>
+          <div class="hero">
+            <div class="hero-copy">
+              <span class="hero-kicker">أهلاً بك في مختبر شغف</span>
+              <h1 id="welcomeTitle">الكيمياء ليست معادلات فقط،<br><em>إنها طريقة لفهم العالم.</em></h1>
+              <p>من حولك عناصر وتفاعلات مذهلة. ابدأ رحلة اكتشافها، خطوة فضولية في كل مرة.</p>
+              <div class="hero-actions">
+                <button class="button button-primary" data-go="elements">ابدأ الاستكشاف <span>←</span></button>
+                <button class="button button-quiet" data-go="lab"><span class="play-icon">▶</span> جرّب المختبر</button>
+              </div>
+              <div class="hero-footnote"><span>✦</span> محاكاة تعليمية آمنة، دون مواد حقيقية</div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="art-glow"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+              <div class="art-atom"><span class="atom-core">Sh</span><i class="electron electron-a"></i><i class="electron electron-b"></i><i class="electron electron-c"></i></div>
+              <div class="floating-atom atom-h"><b>H</b><small>1</small></div>
+              <div class="floating-atom atom-o"><b>O</b><small>8</small></div>
+              <div class="floating-atom atom-c"><b>C</b><small>6</small></div>
+              <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span>
+              <div class="art-label">فضولك هو<br><strong>أداتك الأولى</strong></div>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card"><span class="stat-icon mint">◈</span><div><small>عناصر اكتشفتها</small><strong><span id="homeElements">0</span><small class="stat-total"> / 118</small></strong></div><span class="stat-tail">عنصر</span></article>
+            <article class="stat-card"><span class="stat-icon violet">⚗</span><div><small>محاكاة أجريتها</small><strong id="homeExperiments">0</strong></div><span class="stat-tail">تجربة</span></article>
+            <article class="stat-card"><span class="stat-icon amber">✳</span><div><small>نقاط الشغف</small><strong id="homeXp">0</strong></div><span class="stat-tail">XP</span></article>
+            <article class="stat-card"><span class="stat-icon blue">▤</span><div><small>شارات حصلت عليها</small><strong><span id="homeBadges">0</span><small class="stat-total"> / 4</small></strong></div><span class="stat-tail">شارة</span></article>
+          </div>
+
+          <div class="section-heading">
+            <div><span class="eyebrow">نقطة البداية</span><h2>اختر مغامرتك القادمة</h2></div>
+            <button class="text-link" data-go="journal">عرض سجلّي <span>←</span></button>
+          </div>
+          <div class="adventure-grid">
+            <button class="adventure-card adventure-elements" data-go="elements">
+              <span class="adventure-icon">◈</span><span class="card-arrow">↗</span><small>01 — تعرّف</small><strong>عناصر حولك</strong><p>اكتشف مكوّنات العالم، من الهواء الذي نتنفسه إلى المعادن في هاتفك.</p><span class="card-bottom">تصفّح الموسوعة <b>←</b></span>
+            </button>
+            <button class="adventure-card adventure-lab" data-go="lab">
+              <span class="adventure-icon">⚗</span><span class="card-arrow">↗</span><small>02 — جرّب</small><strong>تفاعل بأمان</strong><p>شاهد كيف تتحد المواد في محاكاة تفاعلية مصممة للتعلّم.</p><span class="card-bottom">ادخل المختبر <b>←</b></span>
+            </button>
+            <button class="adventure-card adventure-quiz" data-go="quiz">
+              <span class="adventure-icon">✳</span><span class="card-arrow">↗</span><small>03 — تحدَّ</small><strong>اختبر فضولك</strong><p>أسئلة قصيرة وتلميحات ذكية تساعدك على تثبيت المعلومة.</p><span class="card-bottom">ابدأ التحدّي <b>←</b></span>
+            </button>
+          </div>
+          <div class="home-bottom">
+            <div class="mini-panel">
+              <div class="section-heading compact"><div><span class="eyebrow">لقطة من الموسوعة</span><h2>عناصر تستحق الاكتشاف</h2></div><button class="text-link" data-go="elements">كل العناصر ←</button></div>
+              <div class="featured-elements" id="featuredElements"></div>
+            </div>
+            <aside class="quote-panel"><span class="quote-mark">“</span><p>العلم يبدأ عندما نتوقف عن اعتبار الأشياء مألوفة.</p><span>— رحلة كل مستكشف تبدأ بسؤال</span><div class="quote-orbit"></div></aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-elements" aria-labelledby="elementsTitle">
+          <div class="page-intro"><div><span class="eyebrow"><i></i> الجدول الدوري، بحجم فضولك</span><h1 id="elementsTitle">موسوعة العناصر</h1><p>تعرّف على العناصر الكيميائية الـ118 واكتشف خصائصها ومكانها في حياتنا.</p></div><div class="intro-count"><strong id="elementCount">118</strong><span>عنصراً<br>بانتظارك</span></div></div>
+          <div class="element-toolbar">
+            <label class="search-box"><span>⌕</span><input id="elementSearch" type="search" placeholder="ابحث عن عنصر أو رمز أو رقم ذري..." autocomplete="off"></label>
+            <button class="button button-quiet" id="openComparison">⚖️ مقارنة العناصر</button>
+            <div class="view-switch" role="group" aria-label="طريقة العرض"><button class="button button-quiet mode-btn active" data-mode="cards">▦ بطاقات</button><button class="button button-quiet mode-btn" data-mode="table">⊞ الجدول الدوري</button></div>
+            <div class="filter-group" role="group" aria-label="تصفية حسب نوع العنصر">
+              <button class="filter-chip active" data-filter="الكل">الكل</button>
+              <button class="filter-chip" data-filter="فلز قلوي">فلز قلوي</button>
+              <button class="filter-chip" data-filter="فلز قلوي ترابي">قلوي ترابي</button>
+              <button class="filter-chip" data-filter="فلز انتقالي">انتقالي</button>
+              <button class="filter-chip" data-filter="فلز بعد انتقالي">بعد انتقالي</button>
+              <button class="filter-chip" data-filter="شبه فلز">شبه فلز</button>
+              <button class="filter-chip" data-filter="لافلز">لافلز</button>
+              <button class="filter-chip" data-filter="هالوجين">هالوجين</button>
+              <button class="filter-chip" data-filter="غاز نبيل">غاز نبيل</button>
+              <button class="filter-chip" data-filter="لانثانيد">لانثانيد</button>
+              <button class="filter-chip" data-filter="أكتينيد">أكتينيد</button>
+            </div>
+          </div>
+          <div class="element-grid" id="elementGrid"></div>
+          <div class="pt-wrap hidden" id="periodicWrap"><div class="periodic-table" id="periodicTable"></div><div class="pt-legend"><span class="cat-alkali">فلز قلوي</span><span class="cat-earth">قلوي ترابي</span><span class="cat-trans">انتقالي</span><span class="cat-post">بعد انتقالي</span><span class="cat-metalloid">شبه فلز</span><span class="cat-nonmetal">لافلز</span><span class="cat-halogen">هالوجين</span><span class="cat-noble">غاز نبيل</span><span class="cat-lanth">لانثانيد</span><span class="cat-actin">أكتينيد</span></div></div>
+          <div class="empty-state hidden" id="elementEmpty">لم نعثر على عنصر بهذا الاسم. جرّب البحث بكلمة أخرى.</div>
+        </section>
+
+        <section class="view" id="view-lab" aria-labelledby="labTitle">
+          <div class="page-intro"><div><span class="eyebrow"><i></i> التعلّم بالمشاهدة</span><h1 id="labTitle">المختبر الافتراضي</h1><p>اختر تفاعلاً موثقاً وشاهد ما يحدث على مستوى الجزيئات — بأمان تام.</p></div><div class="lab-stamp"><span>⚗</span><small>محاكاة<br>تعليمية</small></div></div>
+          <div class="safety-banner"><span>ⓘ</span><p><strong>تنبيه مهم:</strong> هذه التجارب محاكاة رقمية للتعلّم فقط. لا تخلط مواداً كيميائية حقيقية؛ التجارب الواقعية تتطلب مختبراً مجهزاً وإشراف مختص.</p></div>
+          <div class="lab-layout">
+            <div class="lab-controls panel">
+              <span class="panel-kicker">تجربتك الافتراضية</span><h2>اختر التفاعل الكيميائي</h2>
+              <div>
+                <label class="field-label" for="reactionSelect">اختر تفاعلاً تعليمياً موثقاً</label>
+                <select id="reactionSelect">
+                  <option value="vinegar">الخل + بيكربونات الصوديوم</option>
+                  <option value="rust">الحديد + الأكسجين (الصدأ)</option>
+                  <option value="water">الهيدروجين + الأكسجين (تكوين الماء)</option>
+                  <option value="sodium">الصوديوم + الماء</option>
+                  <option value="magnesium">المغنيسيوم + الأكسجين</option>
+                  <option value="zinc">الزنك + حمض الهيدروكلوريك</option>
+                  <option value="calcium">الكالسيوم + الماء</option>
+                  <option value="carbon">الكربون + الأكسجين</option>
+                  <option value="copper">النحاس + حمض النيتريك</option>
+                  <option value="sulfur">الكبريت + الأكسجين</option>
+                  <option value="copperOxide">النحاس + الأكسجين</option>
+                </select>
+              </div>
+              <div class="reactant-preview" id="reactantPreview"></div>
+              <button class="button button-primary run-button" id="runExperiment"><span>▶</span> ابدأ المحاكاة</button>
+              <p class="control-note">ستُضاف نقطة شغف عند كل محاكاة جديدة.</p>
+            </div>
+            <div class="simulation panel" id="simulation">
+              <div class="simulation-top"><span class="panel-kicker">منطقة المحاكاة</span><span class="sim-status" id="simStatus"><i></i> جاهز للتجربة</span></div>
+              <div class="simulation-stage" id="simulationStage">
+                <div class="stage-grid"></div><div class="flask-wrap"><div class="flask-neck"></div><div class="flask"><div class="liquid" id="liquid"></div><div class="bubbles" id="bubbles"><i></i><i></i><i></i><i></i><i></i></div></div><div class="flask-base"></div></div>
+                <div class="stage-molecule molecule-left" id="moleculeLeft">CH₃COOH</div><div class="stage-molecule molecule-right" id="moleculeRight">NaHCO₃</div>
+                <span class="stage-label">افتراضية • آمنة • تفاعلية</span>
+              </div>
+              <div class="reaction-result" id="reactionResult"><div class="result-placeholder"><span>✧</span><p>اضغط على «ابدأ المحاكاة»<br>لمشاهدة التفاعل ونتيجته.</p></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="view-quiz" aria-labelledby="quizTitle">
+          <div class="page-intro"><div><span class="eyebrow"><i></i> معلومة جديدة في كل سؤال</span><h1 id="quizTitle">تحدّي المعرفة</h1><p>فكّر، اختر، واكتشف السبب العلمي وراء كل إجابة.</p></div><div class="quiz-score-pill">✦ <span id="quizTotalScore">0</span><small>نقطة شغف</small></div></div>
+          <div class="quiz-layout">
+            <div class="quiz-card panel" id="quizCard"></div>
+            <aside class="quiz-aside panel"><div class="quiz-aside-icon">✳</div><span class="panel-kicker">تذكّر دائماً</span><h3>الخطأ خطوة في طريق الاكتشاف.</h3><p>لا تتسرع في الإجابة. استخدم التلميح إذا احتجت، فالفهم أهم من السرعة.</p><div class="quiz-progress-label"><span>تقدّمك</span><strong id="quizProgressText">0 / 10</strong></div><div class="progress-track"><span id="quizProgressBar"></span></div><div class="quiz-tip">✦ كل إجابة تشرح لك <strong>لماذا</strong>، وليس فقط ما هو الصحيح.</div></aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-journal" aria-labelledby="journalTitle">
+          <div class="page-intro"><div><span class="eyebrow"><i></i> رحلتك العلمية، لحظة بلحظة</span><h1 id="journalTitle">سجل الاكتشافات</h1><p>كل عنصر وتفاعل وسؤال أجبت عنه يضيف فصلاً إلى رحلتك.</p></div><button class="button button-outline" id="resetProgress">↻ بدء رحلة جديدة</button></div>
+          <div class="journal-overview"><div class="journal-xp panel"><div><span class="panel-kicker">رصيدك الحالي</span><strong><span id="journalXp">0</span><small>XP</small></strong><p>كل فضول يستحق مكافأة.</p></div><div class="xp-ring"><span>✦</span></div></div><div class="journal-stat panel"><span class="stat-icon mint">◈</span><div><small>عناصر مكتشفة</small><strong id="journalElements">0</strong></div></div><div class="journal-stat panel"><span class="stat-icon violet">⚗</span><div><small>تجارب افتراضية</small><strong id="journalExperiments">0</strong></div></div></div>
+          <div class="journal-columns"><div class="panel badges-panel"><div class="section-heading compact"><div><span class="eyebrow">إنجازاتك</span><h2>شارات الشغف</h2></div><span class="badge-count" id="badgeCount">0 / 4</span></div><div class="badge-list" id="badgeList"></div></div><div class="panel activity-panel"><div class="section-heading compact"><div><span class="eyebrow">ما الذي أنجزته؟</span><h2>آخر الاكتشافات</h2></div></div><div id="activityList"></div></div></div>
+        </section>
+
+        <footer class="footer"><span>مختبر شغف <b>✦</b> تعلّم، استكشف، وابقَ فضولياً.</span><span>عمل الطالبات: دانة العنزي وجنى المطيري · المعلمة: فاتن النمر</span><span>تجارب افتراضية فقط — سلامتك أولاً</span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="element-dialog" id="elementDialog"><button class="dialog-close" id="dialogClose" aria-label="إغلاق">×</button><div id="elementDialogContent"></div></dialog>
+  <dialog class="comparison-dialog" id="comparisonDialog">
+    <button class="dialog-close" id="comparisonClose" aria-label="إغلاق">×</button>
+    <h2>⚖️ مقارنة العناصر جنباً إلى جنب</h2>
+    <p class="comparison-desc">اختر عنصرين لمقارنة أعدادهما الذرية، كتلتهما، حالتهما، واستخداماتهما.</p>
+    <div class="comparison-selectors">
+      <div>
+        <label class="field-label" for="compareEl1">العنصر الأول</label>
+        <select class="element-select" id="compareEl1"></select>
+      </div>
+      <div>
+        <label class="field-label" for="compareEl2">العنصر الثاني</label>
+        <select class="element-select" id="compareEl2"></select>
+      </div>
+    </div>
+    <div class="comparison-results" id="comparisonResults"></div>
+  </dialog>
+  <dialog class="about-dialog" id="aboutDialog"><button class="dialog-close" id="aboutClose" aria-label="إغلاق">×</button><span class="brand-mark">⚗</span><h2>عن مختبر شغف</h2><p>مساحة تفاعلية لتبسيط أساسيات الكيمياء بالتعلّم بالمشاهدة والاستكشاف. جميع التجارب افتراضية، وتقدّمك محفوظ محلياً على جهازك دون حساب.</p><p class="about-safety">المحاكاة لا تُعدّ تعليمات لتنفيذ تفاعلات كيميائية حقيقية.</p><button class="button button-primary" id="aboutDone">رائع، لنبدأ</button></dialog>
+</body>
+</html>
