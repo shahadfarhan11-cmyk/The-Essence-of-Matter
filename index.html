@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مختبر شغف التفاعلي: جوهر المادة</title>
+    <title>مختبر شغف: جوهر المادة</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="project-title">🧪 مختبر شغف: جوهر المادة</div>
-        <div class="author-meta">إعداد الطالبة: <span>رند فرحان العنزي</span> | إشراف المعلمة: <span>منيرة الرويلي</span></div>
+        <div class="header-content">
+            <div class="project-title">🧪 مختبر شغف: جوهر المادة</div>
+            <div class="author-meta">إعداد الطالبة: <span>رند فرحان العنزي</span> | إشراف المعلمة: <span>منيرة الرويلي</span></div>
+        </div>
     </header>
 
-    <div class="slides-container">
+    <main class="slides-container">
 
         <!-- الشريحة 1: المقدمة -->
         <div class="slide active">
@@ -24,30 +26,36 @@
             </div>
             <p>أنا الكيمياء.. لستُ مجرد رموز جافة في الكتب، بل أنا نبض الطبيعة وأسرار المادة المنظومة بحكمة في الكون!</p>
             <div class="elements-grid">
-                <div class="element-card gold-card">
+                
+                <!-- بطاقة قابلة للطي (تنزيل وتطلع) -->
+                <div class="element-card gold-card" onclick="toggleCard(this)">
                     <div class="card-top">
                         <span class="element-symbol">Au</span>
                         <span class="element-atomic">العدد الذري: 79</span>
                     </div>
                     <div class="element-name">الذهب (Gold)</div>
+                    <div class="element-preview">اضغط لعرض التفاصيل والتواجد الطبيعي 🔽</div>
                     <div class="element-detail">
-                        • الحالة: صلب نقي رمزه الكيميائي خامل.<br>
-                        • أين تجده: في عروق الصخور النارية والحلي.<br>
-                        • ميزة: موصل فائق للكهرباء لا يصدأ.
+                        • <strong>الحالة:</strong> صلب نقي رمزه الكيميائي خامل.<br>
+                        • <strong>أين تجده:</strong> في عروق الصخور النارية والحلي.<br>
+                        • <strong>ميزة:</strong> موصل فائق للكهرباء لا يصدأ أبداً.
                     </div>
                 </div>
-                <div class="element-card calcium-card">
+
+                <div class="element-card calcium-card" onclick="toggleCard(this)">
                     <div class="card-top">
                         <span class="element-symbol">Ca</span>
                         <span class="element-atomic">العدد الذري: 20</span>
                     </div>
                     <div class="element-name">الكالسيوم (Calcium)</div>
+                    <div class="element-preview">اضغط لعرض التفاصيل والتواجد الطبيعي 🔽</div>
                     <div class="element-detail">
-                        • الحالة: فلز قروي أبيض فضي.<br>
-                        • أين تجده: بالحليب، العظام، وجبال الرخام.<br>
-                        • ميزة: يمنح القوة البنائية للهياكل الحية.
+                        • <strong>الحالة:</strong> فلز قروي أبيض فضي.<br>
+                        • <strong>أين تجده:</strong> بالحليب، العظام، وجبال الرخام.<br>
+                        • <strong>ميزة:</strong> يمنح القوة البنائية للهياكل الحية.
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -59,50 +67,46 @@
             </div>
             <p>انظري كيف تتوزع عناصرنا وتصنيفاتها بخصائصها الحقيقية في كل نواحي بيئتنا:</p>
             <div class="elements-grid">
-                <div class="element-card silicon-card">
+                
+                <div class="element-card silicon-card" onclick="toggleCard(this)">
                     <div class="card-top">
                         <span class="element-symbol">Si</span>
                         <span class="element-atomic">العدد الذري: 14</span>
                     </div>
                     <div class="element-name">السيليكون (Silicon)</div>
+                    <div class="element-preview">اضغط لعرض التفاصيل والتواجد الطبيعي 🔽</div>
                     <div class="element-detail">
-                        • أين تجده: رمل الشواطئ والشرائح الذكية.<br>
-                        • ميزة: عصب ثورة الإلكترونيات والتقنية.
+                        • <strong>أين تجده:</strong> رمل الشواطئ، الزجاج، والشرائح الذكية.<br>
+                        • <strong>ميزة:</strong> عصب ثورة الإلكترونيات والتقنية الحديثة.
                     </div>
                 </div>
-                <div class="element-card chlorine-card">
+
+                <div class="element-card chlorine-card" onclick="toggleCard(this)">
                     <div class="card-top">
                         <span class="element-symbol">Cl</span>
                         <span class="element-atomic">العدد الذري: 17</span>
                     </div>
                     <div class="element-name">الكلور (Chlorine)</div>
+                    <div class="element-preview">اضغط لعرض التفاصيل والتواجد الطبيعي 🔽</div>
                     <div class="element-detail">
-                        • أين تجده: مياه المحيطات والمركبات المطهرة.<br>
-                        • ميزة: مطهر قوي يسهم في تكوين الملح.
+                        • <strong>أين تجده:</strong> مياه المحيطات والمركبات المطهرة.<br>
+                        • <strong>ميزة:</strong> مطهر قوي يسهم في تكوين الملح الحيوي.
                     </div>
                 </div>
-                <div class="element-card sodium-card">
+
+                <div class="element-card sodium-card" onclick="toggleCard(this)">
                     <div class="card-top">
                         <span class="element-symbol">Na</span>
                         <span class="element-atomic">العدد الذري: 11</span>
                     </div>
                     <div class="element-name">الصوديوم (Sodium)</div>
+                    <div class="element-preview">اضغط لعرض التفاصيل والتواجد الطبيعي 🔽</div>
                     <div class="element-detail">
-                        • أين تجده: المركبات الملحية والسوائل التناضحية.<br>
-                        • ميزة: شديد التفاعل يمنح التوازن السائلي.
+                        • <strong>أين تجده:</strong> المركبات الملحية والسوائل الحيوية.<br>
+                        • <strong>ميزة:</strong> شديد التفاعل يمنح التوازن السائلي للجسم.
                     </div>
                 </div>
-                <div class="element-card hydrogen-card">
-                    <div class="card-top">
-                        <span class="element-symbol">Fe</span>
-                        <span class="element-atomic">العدد الذري: 26</span>
-                    </div>
-                    <div class="element-name">الحديد (Iron)</div>
-                    <div class="element-detail">
-                        • أين تجده: نوات الأرض، المباني، وهيموجلوبين الدم.<br>
-                        • ميزة: أساس الصلابة البنائية ونقل الأكسجين.
-                    </div>
-                </div>
+
             </div>
         </div>
 
@@ -118,39 +122,40 @@
                 <button class="rxn-btn active" data-rxn="water">ماء (H₂O)</button>
                 <button class="rxn-btn" data-rxn="co2">ثاني أكسيد الكربون (CO₂)</button>
                 <button class="rxn-btn" data-rxn="salt">ملح الطعام (NaCl)</button>
-                <button class="rxn-btn" data-rxn="rust">صدأ الحديد (Fe₂O₃)</button>
-                <button class="rxn-btn" data-rxn="volcano">البركان المطبخي (الخل والبيكربونات)</button>
+                <button class="rxn-btn" data-rxn="volcano">البركان المطبخي</button>
             </div>
 
             <div id="reactionDisplay" class="reaction-display-box">
-                <!-- يتم التحديث ديناميكياً عبر JavaScript -->
+                <!-- يتم التحديث ديناميكياً -->
             </div>
         </div>
 
         <!-- الشريحة 4: ألبوم المركبات والأوسمة -->
         <div class="slide">
             <div class="slide-header">
-                <h2>ألبوم المركبات (Compound Codex) وسجل الأوسمة</h2>
+                <h2>ألبوم المركبات (Compound Codex)</h2>
                 <span class="slide-badge">نظام الإنجاز</span>
             </div>
             <p>كل تجربة اندماج ناجحة تُحفظ كبطاقة اكتشاف في ألبومكِ الخاص مع وسام تفوق:</p>
             <div class="elements-grid">
-                <div class="element-card gold-card">
+                <div class="element-card gold-card" onclick="toggleCard(this)">
                     <div class="card-top">
                         <span class="element-symbol">🏆</span>
-                        <span class="bond-tag">وسام مكتشفة الطبيعة</span>
+                        <span class="bond-tag">وسام المكتشفة</span>
                     </div>
                     <div class="element-name">خبير استكشاف العناصر</div>
+                    <div class="element-preview">اضغط لعرض تفاصيل الوسام 🔽</div>
                     <div class="element-detail">
-                        يُكتسب عند معرفة مصادر العناصر بالبيئة وتتبع خصائصها الذرية والفيزيائية.
+                        يُكتسب عند معرفة مصادر العناصر بالبيئة وتتبع خصائصها الذرية والفيزيائية بدقة.
                     </div>
                 </div>
-                <div class="element-card chlorine-card">
+                <div class="element-card chlorine-card" onclick="toggleCard(this)">
                     <div class="card-top">
                         <span class="element-symbol">🧬</span>
-                        <span class="bond-tag">وسام هندسة الجزيئات</span>
+                        <span class="bond-tag">وسام الهندسة</span>
                     </div>
                     <div class="element-name">مهندسة الروابط الكيميائية</div>
+                    <div class="element-preview">اضغط لعرض تفاصيل الوسام 🔽</div>
                     <div class="element-detail">
                         يُمنح عند دمج العناصر في المختبر الافتراضي واستكشاف تركيبة الروابط الناتجة.
                     </div>
@@ -164,14 +169,14 @@
                 <h2>الكيمياء تنبض بالشغف والجمال معكِ</h2>
                 <span class="slide-badge">الخاتمة</span>
             </div>
-            <p style="font-size: 1.1rem; margin: 10px 0;">رحلتنا في علم المادة مستمرة.. ومختبر شغف يفتح أبواب الاكتشاف لتلهمي العقول وتصنعي الفرق!</p>
+            <p style="font-size: 1rem; margin: 10px 0;">رحلتنا في علم المادة مستمرة.. ومختبر شغف يفتح أبواب الاكتشاف لتلهمي العقول وتصنعي الفرق!</p>
             <div style="background: var(--primary-light); padding: 12px; border-radius: 12px; margin-top: 10px;">
-                <p style="font-size: 1.25rem; color: var(--primary); font-weight: 900;">صُنع بشغف لإبهار العقول وتسهيل العلوم!</p>
-                <p style="color: var(--text-muted); margin-top: 4px; font-size: 0.9rem;">إعداد الطالبة: <strong>رند فرحان العنزي</strong> | إشراف المعلمة: <strong>منيرة الرويلي</strong></p>
+                <p style="font-size: 1.2rem; color: var(--primary); font-weight: 900;">صُنع بشغف لإبهار العقول وتسهيل العلوم!</p>
+                <p style="color: var(--text-muted); margin-top: 4px; font-size: 0.85rem;">إعداد الطالبة: <strong>رند فرحان العنزي</strong> | إشراف المعلمة: <strong>منيرة الرويلي</strong></p>
             </div>
         </div>
 
-    </div>
+    </main>
 
     <footer>
         <div class="controls">
